@@ -40,6 +40,6 @@ jobs:
              - name: Replace IP
                uses: jafin/gha-search-replace@0.2-alpha
                with:
-                  include: IPTV-Unicom.m3u
+                  include: "**IPTV-Unicom.m3u"
                   search: '192.168.123.1:23234'
                   replace: '10.0.0.1:8888'
