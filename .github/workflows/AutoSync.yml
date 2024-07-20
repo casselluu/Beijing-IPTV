@@ -40,5 +40,5 @@ jobs:
              - name: Replace IP
                uses: datamonsters/replace-action@v2
                with:
-                  files: '/IPTV-Unicom.m3u'
+                  files: 'IPTV-Unicom.m3u'
                   replacements: '192.168.123.1:23234=10.0.0.1:8888'
