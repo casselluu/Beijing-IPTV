@@ -1,4 +1,4 @@
-name: Upstream Sync
+name: Upstream Sync&ReplaceIP
 
 permissions:
     contents: write
@@ -32,3 +32,16 @@ jobs:
               run: |
                   echo "[Error] Due to a change in the workflow file of the upstream repository, GitHub has automatically suspended the scheduled automatic update. You need to manually sync your fork."
                   exit 1
+    
+    replace_ip:
+        name: Replace IP to your own
+        runs-on: ubuntu-latest
+        steps:
+             - name: Replace IP
+               uses: datamonsters/replace-action
+               with:
+                  files: '/uses: datamonsters/replace-action
+with:
+  files: 'path1/file1,path2/file2'
+  replacements: 'foo=bar,$FOO=Bar_Value'
+                  replacements: 'foo=bar,$FOO=Bar_Value
