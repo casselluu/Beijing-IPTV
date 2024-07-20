@@ -38,7 +38,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
              - name: Replace IP
-               uses: datamonsters/replace-action@v2
+               uses: jafin/gha-search-replace@0.2-alpha
                with:
-                  files: './IPTV-Unicom.m3u'
-                  replacements: '192.168.123.1:23234=10.0.0.1:8888'
+                  include: IPTV-Unicom.m3u
+                  search: '192.168.123.1:23234'
+                  replace: '10.0.0.1:8888'
