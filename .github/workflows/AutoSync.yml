@@ -38,10 +38,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
              - name: Replace IP
-               uses: datamonsters/replace-action
+               uses: datamonsters/replace-action@v2
                with:
-                  files: '/uses: datamonsters/replace-action
-with:
-  files: 'path1/file1,path2/file2'
-  replacements: 'foo=bar,$FOO=Bar_Value'
-                  replacements: 'foo=bar,$FOO=Bar_Value
+                  files: '/IPTV-Unicom.m3u'
+                  replacements: '192.168.123.1:23234=10.0.0.1:8888'
